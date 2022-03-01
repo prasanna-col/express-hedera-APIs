@@ -1,0 +1,94 @@
+-- Register API - Method:POST
+http://localhost:8082/api/userRegister
+Header:
+api_secret_key:dfdgh347dfnhh$$%%%%%33657667&%#$^&fdgfhgfhghgh4445yhsb@@@&*
+Content-Type:application/json
+Body:
+email:lotus7@yopmail.com
+password:lotus7
+username:lotus7
+
+
+__________________________________________________________________________________
+
+-- Login API - Method:POST
+http://localhost:8082/api/userLogin
+Header:
+api_secret_key:dfdgh347dfnhh$$%%%%%33657667&%#$^&fdgfhgfhghgh4445yhsb@@@&*
+Content-Type:application/json
+Body:
+email_username:lotus7@yopmail.com
+password:lotus7
+
+In Login API response, will receive the token, that need pass in Authorization in all the following APIs.
+
+__________________________________________________________________________________
+-- create Item API - Method:POST
+http://localhost:8082/api/createItem
+Header:
+api_secret_key:dfdgh347dfnhh$$%%%%%33657667&%#$^&fdgfhgfhghgh4445yhsb@@@&*
+Content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdHVzNkB5b3BtYWlsLmNvbSIsInVzZXJuYW1lIjoibG90dXM2IiwiaWQiOiI2MjFlMWYyNjE5ODI5OTEwZmQ4YTgxN2EiLCJpYXQiOjE2NDYxNDEyNDEsImV4cCI6MTY1MzkxNzI0MX0.QBAjjKNIwIvtbcAgUy87yKLRYQDV8WmAeS0-JKHIkV4
+Body:
+itemName:pendrive
+itemPrice:20
+
+
+__________________________________________________________________________________
+
+-- Buy Items API - Method:POST
+
+http://localhost:8082/api/buyItem
+Header:
+api_secret_key:dfdgh347dfnhh$$%%%%%33657667&%#$^&fdgfhgfhghgh4445yhsb@@@&*
+Content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdHVzN0B5b3BtYWlsLmNvbSIsInVzZXJuYW1lIjoibG90dXM3IiwiaWQiOiI2MjFlMjFkNjRlNmY2MzExMWU0ZjRiY2UiLCJpYXQiOjE2NDYxNDE5NDgsImV4cCI6MTY1MzkxNzk0OH0.JAB_Ubm0UuK2HwESeRHHL5aV_7UpV4bSVIgyXbmJSLk
+Body:
+itemName:pendrive
+itemPrice:10
+itemQuantity:1
+buyerStreetLocation:abc street
+buyerCityName:abc city
+buyerPinCode:683002
+buyerPhoneNo:892387768
+
+
+__________________________________________________________________________________
+
+-- Sell Item API - Method:POST
+
+http://localhost:8082/api/sellItem
+Header:
+api_secret_key:dfdgh347dfnhh$$%%%%%33657667&%#$^&fdgfhgfhghgh4445yhsb@@@&*
+Content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdHVzN0B5b3BtYWlsLmNvbSIsInVzZXJuYW1lIjoibG90dXM3IiwiaWQiOiI2MjFlMjFkNjRlNmY2MzExMWU0ZjRiY2UiLCJpYXQiOjE2NDYxNDE5NDgsImV4cCI6MTY1MzkxNzk0OH0.JAB_Ubm0UuK2HwESeRHHL5aV_7UpV4bSVIgyXbmJSLk
+Body:
+itemName:pendrive
+itemPrice:20
+itemQuantity:5
+sellerStreetLocation:abcSellLoc
+sellerCityName:abcCity
+sellerPinCode:625567
+sellerPhoneNo:9832987834
+
+
+__________________________________________________________________________________
+-- Get the list of items we sold, API - Method:GET
+
+http://localhost:8082/api/getItemsSold
+Header:
+api_secret_key:dfdgh347dfnhh$$%%%%%33657667&%#$^&fdgfhgfhghgh4445yhsb@@@&*
+Content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdHVzN0B5b3BtYWlsLmNvbSIsInVzZXJuYW1lIjoibG90dXM3IiwiaWQiOiI2MjFlMjFkNjRlNmY2MzExMWU0ZjRiY2UiLCJpYXQiOjE2NDYxNDE5NDgsImV4cCI6MTY1MzkxNzk0OH0.JAB_Ubm0UuK2HwESeRHHL5aV_7UpV4bSVIgyXbmJSLk
+
+
+__________________________________________________________________________________
+-- Get the List of Item we have ordered, API - Method:GET
+
+http://localhost:8082/api/getPastOrders
+Header:
+api_secret_key:dfdgh347dfnhh$$%%%%%33657667&%#$^&fdgfhgfhghgh4445yhsb@@@&*
+Content-Type:application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdHVzN0B5b3BtYWlsLmNvbSIsInVzZXJuYW1lIjoibG90dXM3IiwiaWQiOiI2MjFlMjFkNjRlNmY2MzExMWU0ZjRiY2UiLCJpYXQiOjE2NDYxNDE5NDgsImV4cCI6MTY1MzkxNzk0OH0.JAB_Ubm0UuK2HwESeRHHL5aV_7UpV4bSVIgyXbmJSLk
+
+__________________________________________________________________________________
