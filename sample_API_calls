@@ -1,3 +1,8 @@
+Deplyed in heroku -- BaseUrl- https://express-hedera-apis.herokuapp.com/
+
+eg: https://express-hedera-apis.herokuapp.com/api/userRegister
+__________________________________________________________________________________
+
 -- Register API - Method:POST
 http://localhost:8082/api/userRegister
 Header:
@@ -7,7 +12,6 @@ Body:
 email:lotus7@yopmail.com
 password:lotus7
 username:lotus7
-
 
 __________________________________________________________________________________
 
