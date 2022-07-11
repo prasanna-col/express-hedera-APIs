@@ -20,8 +20,8 @@ exports.validateApiSecret = (req,res,next) =>{
 
   // console.log("api_secret_key", api_secret_key)
   // console.log("process.env.API_SECRET_KEY", process.env.API_SECRET_KEY)
-  console.log("api_secret_key", api_secret_key)
-  console.log("process.env.API_SECRET_KEY", process.env.API_SECRET_KEY)
+  console.log("constant API_SECRET_KEY ", API_SECRET_KEY)
+  console.log("env API_SECRET_KEY", process.env.API_SECRET_KEY)
 
   bcrypt.compare(api_secret_key,MY_PRIVATE_KEY, function(err, result) {
     // console.log("err, result", err, result)

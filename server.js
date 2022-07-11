@@ -1,23 +1,28 @@
-const express   = require('express');
-const app       = require("./server/routes/routes");
-const debug     = require("debug")("node-angular");
-const path      = require('path');
-const http      = require("http");
-const mongoose  = require("mongoose");
+const express = require('express');
+const app = require("./server/routes/routes");
+const debug = require("debug")("node-angular");
+const path = require('path');
+const http = require("http");
+const mongoose = require("mongoose");
+
+require('dotenv').config() // To access the data in env file
+
 // MongoDB connection
-require('dotenv').config()
+
 const LiveDB = "mongodb+srv://prasanna-col:prasannaCol@cluster0hbar.w1ozt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const LocalDB = "mongodb://127.0.0.1:27017/sample_db"
+
 mongoose.connect(LiveDB,
-{ useNewUrlParser: true,
-  useCreateIndex:true,
-  useFindAndModify:false,
-  useUnifiedTopology: true
-}).then(() => {
+  {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  }).then(() => {
     console.log("Connected to MongoDB");
-}).catch(err => {
-    console.log("Error connecting to MongoDB",err.message);
-});
+  }).catch(err => {
+    console.log("Error connecting to MongoDB -->", err.message);
+  });
 
 // Connection Port setup
 
@@ -74,6 +79,6 @@ const server = http.createServer(app);
 server.on("error", onError);
 server.on("listening", onListening);
 server.listen(port, () => {
-  
-  console.log("Server started on port --> 8082");
+
+  console.log("Server started on port -->", port);
 });

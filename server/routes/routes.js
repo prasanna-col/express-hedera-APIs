@@ -1,11 +1,11 @@
-const express       =   require('express');
-const bodyparser    =   require('body-parser');
-const app           =   express();
-const cors          =   require("cors");
-const path          =   require('path');
-const moment        =   require('moment-timezone');
-const userAuth      =   require('./lib/auth/userAuth');
-const itemsAPI      =   require('./lib/api/itemsapi');
+const express = require('express');
+const bodyparser = require('body-parser');
+const app = express();
+const cors = require("cors");
+const path = require('path');
+const moment = require('moment-timezone');
+const userAuth = require('./lib/auth/userAuth');
+const itemsAPI = require('./lib/api/itemsapi');
 
 
 //BODY PARSER PRESET
@@ -44,12 +44,12 @@ moment.tz.setDefault("Asia/Kolkata");
 
 // User Login/Signup
 
-app.use('/api',userAuth);
+app.use('/api', userAuth);
 
 
 // Items API
 
-app.use('/api',itemsAPI);
+app.use('/api', itemsAPI);
 
 
 
